@@ -1,0 +1,56 @@
+@import '../../styles/breakpoints.scss';
+
+.container {
+  border-radius: 25px;
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.4);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-inline: auto;
+}
+
+.auto {
+  width: 400px;
+}
+
+.small {
+  width: 300px;
+}
+
+.medium {
+  width: 430px;
+}
+
+.large {
+  width: 600px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+@media (max-width: $bp-small) {
+  .auto {
+    width: 275px;
+  }
+}
+
+@media (min-width: $bp-medium) {
+  .auto {
+    width: 550px;
+  }
+}
+
+@media (min-width: $bp-large) {
+  .container {
+    margin-bottom: 2.5rem;
+  }
+  .auto {
+    width: 700px;
+  }
+
+  .card {
+    max-width: 440px;
+  }
+}

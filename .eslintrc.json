@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "standard-with-typescript",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:storybook/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/return-await": "off"
+  }
+}

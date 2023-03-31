@@ -1,0 +1,74 @@
+@import '../../styles/colors.scss';
+@import '../../styles/breakpoints.scss';
+@import '../../styles/typography.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+
+  & h3 {
+    font-size: $small-font-size;
+    white-space: nowrap;
+    letter-spacing: -1px;
+
+    &:first-child {
+      color: $main100;
+    }
+  }
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & p {
+    color: $dark;
+    font-size: $small-font-size;
+    letter-spacing: -1px;
+    margin: 0;
+  }
+}
+
+.periodDivisor,
+.divisor {
+  display: none;
+  margin: 0 1rem;
+}
+
+@media (min-width: $bp-medium) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    & span {
+      font-size: $medium-font-size;
+    }
+
+    & h3,
+    p {
+      font-size: $medium-font-size;
+    }
+  }
+
+  .periodDivisor,
+  .divisor {
+    display: block;
+  }
+
+  .rightContainer {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: $bp-large) {
+  .container {
+    & h3,
+    p {
+      font-size: $large-font-size;
+    }
+  }
+}

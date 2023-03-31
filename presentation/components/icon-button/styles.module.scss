@@ -1,0 +1,17 @@
+@import '../../styles/colors.scss';
+
+.container {
+  & a {
+    text-decoration: none;
+    color: $main100;
+    font-weight: 700;
+  }
+}
+
+.mr {
+  margin-right: 0.5rem;
+}
+
+.icon {
+  color: $main100;
+}
