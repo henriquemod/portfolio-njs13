@@ -1,8 +1,8 @@
-@import '../../styles/colors.scss';
+@import "../../styles/colors.scss";
 
 .containerA {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   width: 35rem;
 }
 

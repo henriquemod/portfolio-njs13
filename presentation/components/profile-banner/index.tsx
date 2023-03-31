@@ -23,7 +23,12 @@ const ProfileBanner = (props: ProfileBannerProps): JSX.Element => {
         </div>
         <div className={Styles.profilePic}>
           <div className={Styles.profileBlock} />
-          <Image src={props.avatarUrl} alt="Profile Picture" />
+          <Image
+            src={props.avatarUrl}
+            width={250}
+            height={250}
+            alt="Profile Picture"
+          />
         </div>
       </div>
       <div className={Styles.bottom}>
