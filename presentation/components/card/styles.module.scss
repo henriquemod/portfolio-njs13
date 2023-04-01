@@ -1,6 +1,6 @@
-@import '../../styles/colors.scss';
-@import '../../styles/breakpoints.scss';
-@import '../../styles/typography.scss';
+@import "../../styles/colors.scss";
+@import "../../styles/breakpoints.scss";
+@import "../../styles/typography.scss";
 
 .header {
   display: flex;
@@ -8,6 +8,11 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  max-height: 30px;
+
+  & svg {
+    max-height: 30px;
+  }
 }
 
 .actions {
