@@ -31,8 +31,8 @@ const ProfileBanner = (props: ProfileBannerProps): JSX.Element => {
           />
         </div>
       </div>
-      <div className={Styles.bottom}>
-        <p>{props.message}</p>
+      <div className="flex flex-col mt-12 md:gap-10 sm:gap-5">
+        <p className="sm:text-2xl md:text-3xl">{props.message}</p>
         <Button
           size="medium"
           label="Contact Me"
