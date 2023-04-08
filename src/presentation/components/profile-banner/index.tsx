@@ -54,7 +54,22 @@ const ProfileBanner = (props: ProfileBannerProps): JSX.Element => {
             {props.job}
           </h3>
         </div>
-        <div className="flex justify-center mb-4 sm:mb-8 md:mb-0 md:ml-8">
+        <div className="flex justify-center relative mb-4 sm:mb-8 md:mb-0 md:ml-8">
+          <div
+            className="
+              hidden
+              md:block
+              absolute
+              h-full
+              w-full
+              top-0
+              right-0
+              -mt-5
+              -mr-5
+              border-t-4
+              border-r-4
+              border-main-100"
+          />
           <Image
             className="sticky mobile:max-w-sm"
             src={props.avatarUrl}
