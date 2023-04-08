@@ -11,8 +11,8 @@ const coverageConfig: AddonOptionsBabel = {
 
 const config: StorybookConfig = {
   stories: [
-    "../presentation/**/*.mdx",
-    "../presentation/**/*.stories.@(js|jsx|ts|tsx)",
+    "../src/presentation/**/*.mdx",
+    "../src/presentation/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",
@@ -24,6 +24,12 @@ const config: StorybookConfig = {
         istanbul: {
           ...coverageConfig,
         },
+      },
+    },
+    {
+      name: "@storybook/addon-styling",
+      options: {
+        postCss: true,
       },
     },
   ],
@@ -40,7 +46,7 @@ config.webpackFinal = async (config) => {
   if (config.resolve) {
     config.resolve.alias = {
       ...config.resolve.alias,
-      "@": path.resolve(__dirname, "../"),
+      "@": path.resolve(__dirname, "../src"),
       "@mui/base": "@mui/base/legacy",
       "@mui/lab": "@mui/lab/legacy",
       "@mui/material": "@mui/material/legacy",

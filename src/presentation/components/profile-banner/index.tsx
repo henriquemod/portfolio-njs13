@@ -1,5 +1,4 @@
 import Button from "../button";
-import Styles from "./styles.module.scss";
 import Image from "next/image";
 
 export interface ProfileBannerProps {
@@ -12,32 +11,68 @@ export interface ProfileBannerProps {
 
 const ProfileBanner = (props: ProfileBannerProps): JSX.Element => {
   return (
-    <div className={Styles.container}>
-      <div className={Styles.top}>
-        <div className={Styles.title}>
-          <h2 className={Styles.main}>
-            <span>{`Hi i'm `}</span>
+    <div
+      className="
+    container
+    max-w-full
+    mx-auto
+    flex
+    flex-col"
+    >
+      <div
+        className="
+      flex
+      flex-col-reverse
+      justify-center
+      mb-4
+      sm:mb-8
+      md:flex-row
+      md:justify-between
+      md:items-end"
+      >
+        <div
+          className="
+          text-center
+          text-main-100
+          font-bold
+          text-3xl"
+        >
+          <h2
+            className="
+          sm:flex sm:justify-center sm:text-5xl
+          md:justify-start"
+          >
             {props.name}
           </h2>
-          <h3 className={Styles.main}>{props.job}</h3>
+          <h3
+            className="
+            text-main-100
+            mobile:text-2xl
+            sm:text-5xl
+            md:text-start"
+          >
+            {props.job}
+          </h3>
         </div>
-        <div className={Styles.profilePic}>
-          <div className={Styles.profileBlock} />
+        <div className="flex justify-center mb-4 sm:mb-8 md:mb-0 md:ml-8">
           <Image
+            className="sticky mobile:max-w-sm"
             src={props.avatarUrl}
-            width={250}
-            height={250}
+            width={512}
+            height={512}
             alt="Profile Picture"
           />
         </div>
       </div>
-      <div className="flex flex-col mt-12 md:gap-10 sm:gap-5">
-        <p className="sm:text-2xl md:text-3xl">{props.message}</p>
-        <Button
-          size="medium"
-          label="Contact Me"
-          handleClick={props.handleContactClick}
-        />
+      <div className="flex flex-col">
+        <p className="text-xl mb-4 sm:mb-8 sm:text-2xl">{props.message}</p>
+        <div className="max-w-none sm:max-w-sm">
+          <Button
+            size="medium"
+            label="Contact Me"
+            handleClick={props.handleContactClick}
+          />
+        </div>
       </div>
     </div>
   );

@@ -3034,6 +3034,11 @@
     "@storybook/types" "7.0.0-rc.4"
     ts-dedent "^2.0.0"
 
+"@storybook/addon-styling@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-styling/-/addon-styling-0.3.2.tgz#c393fd9f1647f7748a41601c0b6516dc0a7e939e"
+  integrity sha512-ztKy9uU2yKBtvBp4/Km4LD1JCNNFHpXS33LjbeIfho0toRv100g8tUojrdnoRX1b2KVK6cqep5mJV0z2ak9hIQ==
+
 "@storybook/addon-toolbars@7.0.0-rc.4":
   version "7.0.0-rc.4"
   resolved "https://registry.yarnpkg.com/@storybook/addon-toolbars/-/addon-toolbars-7.0.0-rc.4.tgz#68472c9c0d4a9c53eb2404b9634cc2ed222b2364"
