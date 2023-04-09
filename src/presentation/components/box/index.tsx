@@ -1,40 +1,13 @@
-import Styles from "./styles.module.scss";
-
 interface IProps {
   children: React.ReactNode;
-  size: "small" | "medium" | "large" | "full-width" | "auto" | "card";
-  mb?: 1 | 2 | 3 | 4;
   id?: string;
 }
 
 const Box = (props: IProps): JSX.Element => {
-  let size = Styles.small;
-  const mb = props.mb ? Styles[`mb-${props.mb}`] : "";
-
-  switch (props.size) {
-    case "card":
-      size = `${Styles.card} ${Styles.auto}`;
-      break;
-    case "auto":
-      size = Styles.auto;
-      break;
-    case "small":
-      size = Styles.small;
-      break;
-    case "medium":
-      size = Styles.medium;
-      break;
-    case "large":
-      size = Styles.large;
-      break;
-    case "full-width":
-      size = Styles.fullWidth;
-      break;
-  }
   return (
     <div
       id={props.id ?? "box-card-container"}
-      className={`${Styles.container} ${size} ${mb}`}
+      className={`rounded-lg shadow-lg p-4 mobile:p-5 sm:p-6 md:p-7 flex flex-col justify-between mx-auto`}
     >
       {props.children}
     </div>

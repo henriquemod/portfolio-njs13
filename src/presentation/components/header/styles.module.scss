@@ -1,4 +1,4 @@
-@import '../../styles/colors.scss';
+@import "../../styles/colors.scss";
 
 .container {
   display: flex;
@@ -45,7 +45,7 @@
 
 .active {
   & span::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -0.75rem;
     left: 0;

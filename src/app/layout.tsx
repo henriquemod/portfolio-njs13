@@ -1,9 +1,9 @@
-import "./globals2.css";
 import "@/presentation/styles/globals.scss";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import "./globals2.css";
 
 export const metadata = {
   title: "Henrique Souza - Software Engineer",

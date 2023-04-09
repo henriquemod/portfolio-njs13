@@ -1,17 +1,21 @@
 import { type Score } from "@/domain/models/profile-data-model";
-import Styles from "./styles.module.scss";
 
 const MAX_BLOCKS = 5;
 
 const Block = (): JSX.Element => {
-  return <div role="rank-block" className={Styles.block} />;
+  return (
+    <div
+      role="rank-block"
+      className="w-8 h-6 mobile:w-10 mobile:h-8 ml-1 my-1 bg-main-100 rounded-md"
+    />
+  );
 };
 
 const BlockNone = (): JSX.Element => {
   return (
     <div
       role="rank-block-none"
-      className={`${Styles.block} ${Styles.colorNone}`}
+      className="w-8 h-6 mobile:w-10 mobile:h-8 ml-1 my-1 bg-gray-50 rounded-md"
     />
   );
 };
@@ -33,11 +37,11 @@ const SkillLevel = (props: IProps): JSX.Element => {
   }
 
   return (
-    <div className={Styles.container}>
-      <div className={Styles.skill}>
-        <h2>{props.label}</h2>
-      </div>
-      <div className={Styles.rank}>{blocks}</div>
+    <div className="flex justify-between items-center gap-2">
+      <h2 className="text-sm mobile:text-lg sm:text-xl md:text-2xl">
+        {props.label}
+      </h2>
+      <div className="flex">{blocks}</div>
     </div>
   );
 };

@@ -10,6 +10,41 @@ const customViewports = {
       height: "963px",
     },
   },
+  mobile: {
+    name: "Mobile",
+    styles: {
+      width: "413px",
+      height: "900px",
+    },
+  },
+  sm: {
+    name: "sm",
+    styles: {
+      width: "639px",
+      height: "900px",
+    },
+  },
+  md: {
+    name: "md",
+    styles: {
+      width: "767px",
+      height: "900px",
+    },
+  },
+  lg: {
+    name: "lg",
+    styles: {
+      width: "1023px",
+      height: "900px",
+    },
+  },
+  xl: {
+    name: "xl",
+    styles: {
+      width: "1279px",
+      height: "900px",
+    },
+  },
   wide: {
     name: "Wide",
     styles: {

@@ -13,11 +13,11 @@ const ProfileBanner = (props: ProfileBannerProps): JSX.Element => {
   return (
     <div
       className="
-    container
     max-w-full
-    mx-auto
     flex
-    flex-col"
+    flex-col
+    mb-4
+    sm:mb-8"
     >
       <div
         className="
@@ -73,8 +73,8 @@ const ProfileBanner = (props: ProfileBannerProps): JSX.Element => {
           <Image
             className="sticky mobile:max-w-sm"
             src={props.avatarUrl}
-            width={512}
-            height={512}
+            width={300}
+            height={300}
             alt="Profile Picture"
           />
         </div>

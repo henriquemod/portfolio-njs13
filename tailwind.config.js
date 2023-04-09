@@ -3,6 +3,14 @@ module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          md: "2rem",
+          lg: "0rem",
+        },
+      },
       colors: {
         dark: "#222222",
         white: "#ffffff",

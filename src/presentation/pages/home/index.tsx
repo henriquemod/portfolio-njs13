@@ -4,23 +4,23 @@ import Board from "@/presentation/components/board";
 import Card from "@/presentation/components/card";
 import Chapter from "@/presentation/components/chapter";
 import Header, { type IMenuItem } from "@/presentation/components/header";
-import IconButton from "@/presentation/components/icon-button";
+// import IconButton from "@/presentation/components/icon-button";
 import JobSignature from "@/presentation/components/job-signature";
-import Lateral from "@/presentation/components/lateral";
+// import Lateral from "@/presentation/components/lateral";
 import ProfileBanner from "@/presentation/components/profile-banner";
 import Styles from "./styles.module.scss";
 
-const LEFT_LATERAL_STYLE: React.CSSProperties = {
-  position: "absolute",
-  left: "-550px",
-  top: "-30px",
-};
+// const LEFT_LATERAL_STYLE: React.CSSProperties = {
+//   position: "absolute",
+//   left: "-550px",
+//   top: "-30px",
+// };
 
-const RIGHT_LATERAL_STYLE: React.CSSProperties = {
-  position: "absolute",
-  right: "60px",
-  top: "70px",
-};
+// const RIGHT_LATERAL_STYLE: React.CSSProperties = {
+//   position: "absolute",
+//   right: "60px",
+//   top: "70px",
+// };
 
 const options: IMenuItem[] = [
   {
@@ -62,28 +62,28 @@ const Home = (props: IProps): JSX.Element => {
     />
   );
 
-  const LateralLeft = () => (
-    <div className={Styles.sideBlock}>
-      <Lateral
-        rotateIcons
-        style={LEFT_LATERAL_STYLE}
-        content={profileData.socialMediaData.map((social, i) => (
-          <IconButton
-            openNewPage
-            key={i}
-            icon={social.icon}
-            href={social.url}
-          />
-        ))}
-      />
-    </div>
-  );
+  // const LateralLeft = () => (
+  //   <div className={Styles.sideBlock}>
+  //     <Lateral
+  //       rotateIcons
+  //       style={LEFT_LATERAL_STYLE}
+  //       content={profileData.socialMediaData.map((social, i) => (
+  //         <IconButton
+  //           openNewPage
+  //           key={i}
+  //           icon={social.icon}
+  //           href={social.url}
+  //         />
+  //       ))}
+  //     />
+  //   </div>
+  // );
 
-  const LateralRight = () => (
-    <div className={Styles.sideBlock}>
-      <Lateral style={RIGHT_LATERAL_STYLE} content={profileData.email} />
-    </div>
-  );
+  // const LateralRight = () => (
+  //   <div className={Styles.sideBlock}>
+  //     <Lateral style={RIGHT_LATERAL_STYLE} content={profileData.email} />
+  //   </div>
+  // );
 
   const AboutMe = () => (
     <Chapter title="About me" description={profileData?.aboutMe} id={1} />
@@ -135,17 +135,15 @@ const Home = (props: IProps): JSX.Element => {
   );
 
   return (
-    <div className={Styles.container}>
+    <div className="container mx-auto max-w-screen-lg">
       <div className={Styles.headerContainer}>
         <div className={`${Styles.lateralContainer}`}>
-          <LateralLeft />
+          {/* <LateralLeft /> */}
           <Header align="right" menuItens={options} />
-          <LateralRight />
+          {/* <LateralRight /> */}
         </div>
       </div>
-      <div className={Styles.row}>
-        <ProfileBannerComponent />
-      </div>
+      <ProfileBannerComponent />
       <AboutMe />
       <MySkills />
       <MyPortfolio />
