@@ -22,7 +22,7 @@ interface IProps {
 
 const Card = (props: IProps): JSX.Element => {
   return (
-    <Box size="card" id={props.id} mb={props.mb}>
+    <Box id={props.id}>
       <div className={Styles.header}>
         <FontAwesomeIcon
           size="2x"

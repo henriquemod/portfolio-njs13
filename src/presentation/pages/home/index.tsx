@@ -9,6 +9,7 @@ import JobSignature from "@/presentation/components/job-signature";
 // import Lateral from "@/presentation/components/lateral";
 import ProfileBanner from "@/presentation/components/profile-banner";
 import Styles from "./styles.module.scss";
+import Row from "@/presentation/components/row";
 
 // const LEFT_LATERAL_STYLE: React.CSSProperties = {
 //   position: "absolute",
@@ -143,11 +144,21 @@ const Home = (props: IProps): JSX.Element => {
           {/* <LateralRight /> */}
         </div>
       </div>
-      <ProfileBannerComponent />
-      <AboutMe />
-      <MySkills />
-      <MyPortfolio />
-      <MyWorkCareer />
+      <Row>
+        <ProfileBannerComponent />
+      </Row>
+      <Row>
+        <AboutMe />
+      </Row>
+      <Row>
+        <MySkills />
+      </Row>
+      <Row>
+        <MyPortfolio />
+      </Row>
+      <Row>
+        <MyWorkCareer />
+      </Row>
     </div>
   );
 };
