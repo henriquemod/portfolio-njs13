@@ -1,30 +1,33 @@
 import type { IconType } from "@/domain/models/profile-data-model";
 import { getIcon } from "@/presentation/utils/fa-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Styles from "./styles.module.scss";
 
 interface IProps {
   label?: string;
   icon: IconType;
   href: string;
   openNewPage?: boolean;
+  customClass?: string;
 }
 
 const IconButton = (props: IProps): JSX.Element => {
   return (
-    <div className={Styles.container}>
-      <a
-        href={props.href}
-        role="link"
-        target={props.openNewPage ? "_blank" : "_self"}
-        rel="noreferrer"
+    <a
+      href={props.href}
+      role="link"
+      target={props.openNewPage ? "_blank" : "_self"}
+      rel="noreferrer"
+      className="no-underline text-main-100 font-bold"
+    >
+      <div
+        className={`text-main-100 ${
+          props.label ? "mr-2" : ""
+        } flex flex-row items-center gap-2 ${props.customClass ?? ""}`}
       >
-        <div className={`${Styles.icon} ${props.label ? Styles.mr : ""}`}>
-          <FontAwesomeIcon key={6} size="2x" icon={getIcon(props.icon)} />
-        </div>
-        {props.label && <div className={Styles.label}>{props.label}</div>}
-      </a>
-    </div>
+        <FontAwesomeIcon key={6} size="2x" icon={getIcon(props.icon)} />
+        {props.label && props.label}
+      </div>
+    </a>
   );
 };
 

@@ -11,7 +11,7 @@ const Lateral = (props: IProps): JSX.Element => {
           {contentArray.map((char, i) => (
             <span
               key={i}
-              className=" text-main-100 text-xl -rotate-90 leading-3"
+              className="text-main-100 text-xl -rotate-90 leading-3"
             >
               {char}
             </span>
@@ -20,7 +20,7 @@ const Lateral = (props: IProps): JSX.Element => {
       );
     }
 
-    return <div className="space-y-2 mb-2">{props.content}</div>;
+    return <div className="mb-2">{props.content}</div>;
   };
 
   return (

@@ -59,6 +59,7 @@ const Home = (props: IProps): JSX.Element => {
             key={i}
             icon={social.icon}
             href={social.url}
+            customClass="mb-4"
           />
         ))}
       />

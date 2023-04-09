@@ -7,10 +7,10 @@ import Lateral from ".";
 import { IconType } from "@/domain/models/profile-data-model";
 
 const iconList = [
-  <IconButton key={1} icon={IconType.Github} href="" />,
-  <IconButton key={2} icon={IconType.Github} href="" />,
-  <IconButton key={3} icon={IconType.Github} href="" />,
-  <IconButton key={4} icon={IconType.Github} href="" />,
+  <IconButton key={1} icon={IconType.Github} href="" customClass="my-3" />,
+  <IconButton key={2} icon={IconType.Github} href="" customClass="my-3" />,
+  <IconButton key={3} icon={IconType.Github} href="" customClass="my-3" />,
+  <IconButton key={4} icon={IconType.Github} href="" customClass="my-3" />,
 ];
 
 const meta = {

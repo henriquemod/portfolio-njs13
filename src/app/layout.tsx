@@ -1,15 +1,8 @@
-import "@/presentation/styles/globals.scss";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import "./globals2.css";
-
-export const metadata = {
-  title: "Henrique Souza - Software Engineer",
-  description:
-    "This is my personal website, where I share my projects and experiences",
-};
+import "./globals.css";
 
 export default function RootLayout({
   children,
