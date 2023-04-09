@@ -17,14 +17,14 @@ const Chapter = (props: IProps): JSX.Element => {
       </div>
       <div className="flex flex-col">
         <p
-          className={`text-xl sm:text-2xl ${
+          className={`text-xl sm:text-2xl indent-6 ${
             props.children ? "mb-1 mobile:mb-2 sm:mb-4 md:mb-6" : ""
           }`}
         >
           {props.description}
         </p>
         {props.children && (
-          <div className="my-4" data-testid="child-box">
+          <div className="my-4 mx-auto" data-testid="child-box">
             {props.children}
           </div>
         )}

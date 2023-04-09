@@ -80,7 +80,9 @@ const ProfileBanner = (props: ProfileBannerProps): JSX.Element => {
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="text-xl mb-4 sm:mb-8 sm:text-2xl">{props.message}</p>
+        <p className="text-xl mb-4 sm:mb-8 sm:text-2xl indent-6">
+          {props.message}
+        </p>
         <div className="max-w-none sm:max-w-sm">
           <Button
             size="medium"
