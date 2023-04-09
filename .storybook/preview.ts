@@ -3,45 +3,38 @@ import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
 import "@/app/globals2.css";
 
 const customViewports = {
-  web: {
-    name: "Web",
-    styles: {
-      width: "992px",
-      height: "963px",
-    },
-  },
   mobile: {
     name: "Mobile",
     styles: {
-      width: "413px",
+      width: "415px",
       height: "900px",
     },
   },
   sm: {
     name: "sm",
     styles: {
-      width: "639px",
+      width: "641px",
       height: "900px",
     },
   },
   md: {
     name: "md",
     styles: {
-      width: "767px",
+      width: "769px",
       height: "900px",
     },
   },
   lg: {
     name: "lg",
     styles: {
-      width: "1023px",
+      width: "1025px",
       height: "900px",
     },
   },
   xl: {
     name: "xl",
     styles: {
-      width: "1279px",
+      width: "1281px",
       height: "900px",
     },
   },
