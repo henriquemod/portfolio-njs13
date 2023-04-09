@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   eslint: {
-    dirs: ["presentation", "data", "infra", "domain"],
+    dirs: ["./src"],
   },
   images: {
     remotePatterns: [

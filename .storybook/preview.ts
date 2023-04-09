@@ -1,12 +1,41 @@
 import type { Preview } from "@storybook/react";
 import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
+import "@/app/globals.css";
 
 const customViewports = {
-  web: {
-    name: "Web",
+  mobile: {
+    name: "Mobile",
     styles: {
-      width: "992px",
-      height: "963px",
+      width: "415px",
+      height: "900px",
+    },
+  },
+  sm: {
+    name: "sm",
+    styles: {
+      width: "641px",
+      height: "900px",
+    },
+  },
+  md: {
+    name: "md",
+    styles: {
+      width: "769px",
+      height: "900px",
+    },
+  },
+  lg: {
+    name: "lg",
+    styles: {
+      width: "1025px",
+      height: "900px",
+    },
+  },
+  xl: {
+    name: "xl",
+    styles: {
+      width: "1281px",
+      height: "900px",
     },
   },
   wide: {
