@@ -18,6 +18,14 @@ const itensList = [
     label: "Contato",
     url: "/contato",
   },
+  {
+    label: "Contato",
+    url: "/contato",
+  },
+  {
+    label: "Contato",
+    url: "/contato",
+  },
 ];
 
 const meta = {
@@ -26,14 +34,6 @@ const meta = {
   tags: ["autodocs"],
   args: {
     menuItens: itensList,
-  },
-  argTypes: {
-    align: {
-      control: {
-        type: "select",
-        options: ["left", "center", "right"],
-      },
-    },
   },
 } satisfies Meta<typeof Header>;
 
@@ -45,15 +45,11 @@ export const Primary: Story = {
 };
 
 export const AlignLeft: Story = {
-  args: {
-    align: "left",
-  },
+  args: {},
 };
 
 export const AlignRight: Story = {
-  args: {
-    align: "right",
-  },
+  args: {},
 };
 
 Primary.play = async ({ canvasElement, step, args }) => {

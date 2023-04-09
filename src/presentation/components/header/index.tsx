@@ -1,27 +1,27 @@
-import Styles from "./styles.module.scss";
-
 export interface IMenuItem {
   label: string;
   url: string;
-  active?: boolean;
 }
 
 interface IProps {
-  align?: "left" | "center" | "right";
   menuItens: IMenuItem[];
 }
 
 const renderListItem = (
   index: number,
   label: string,
-  url: string,
-  active: boolean = false
+  url: string
 ): JSX.Element => {
-  const activeStyle = active ? Styles.active : "";
   return (
-    <li key={index} className={`${Styles.listItem} ${activeStyle}`}>
-      <a href={url} target="_self">
-        <span>{`${index.toString().padStart(2, "0")}. `}</span>
+    <li key={index}>
+      <a
+        className="text-dark no-underline px-2 text-2xl font-bold whitespace-nowrap"
+        href={url}
+        target="_self"
+      >
+        <span className="text-main-100">{`${index
+          .toString()
+          .padStart(2, "0")}.`}</span>
         {`<${label} />`}
       </a>
     </li>
@@ -29,12 +29,11 @@ const renderListItem = (
 };
 
 const Header = (props: IProps): JSX.Element => {
-  const alignStyle = Styles[props.align ?? "center"];
   return (
-    <div className={`${Styles.container} ${alignStyle}`}>
-      <ul className={Styles.list}>
+    <div className="mt-4 mb-12 mx-auto">
+      <ul className="flex list-none m-0 p-0 flex-wrap justify-center gap-1 lg:gap-2">
         {props.menuItens.map((item, index) =>
-          renderListItem(index + 1, item.label, item.url, item.active)
+          renderListItem(index + 1, item.label, item.url)
         )}
       </ul>
     </div>
