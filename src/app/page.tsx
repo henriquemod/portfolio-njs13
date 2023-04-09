@@ -2,11 +2,6 @@ import { type ProfileDataModel } from "@/domain/models/profile-data-model";
 import HomeClient from "@/presentation/pages/home";
 import { type Metadata } from "next";
 
-interface Props {
-  params: { id: string };
-  searchParams: Record<string, string | string[] | undefined>;
-}
-
 async function getData(): Promise<ProfileDataModel> {
   const fbUrl = process.env.FIREBASE_DB_URL;
 
@@ -48,10 +43,11 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       ],
     },
+    robots: { index: true, follow: true },
   };
 }
 
-export default async function Home({ params, searchParams }: Props) {
+export default async function Home() {
   const res = await getData();
 
   return <HomeClient profileData={res} />;
