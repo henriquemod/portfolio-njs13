@@ -91,7 +91,7 @@ const Header = (props: IProps): JSX.Element => {
   );
 
   return (
-    <div className="mb-8 lg:mt-4 lg:mb-12 w-screen relative">
+    <div className="mb-8 lg:mt-4 lg:mb-12 flex justify-center w-screen md:w-full">
       <nav className="flex flex-col justify-between w-screen items-center bg-main-100 md:bg-white lg:bg-white py-4 px-8 lg:px-12">
         <DefaultMenu />
         <HamburgerButton />
