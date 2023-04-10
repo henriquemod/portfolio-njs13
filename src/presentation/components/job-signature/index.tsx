@@ -11,9 +11,9 @@ const Divisor = (): JSX.Element => {
 const JobSignature = (props: IProps): JSX.Element => {
   return (
     <div className="flex flex-col lg:flex-row justify-center items-center">
-      <h3 className="text-2xl md:text-3xl xl:text-4xl text-main-100 font-bold">
+      <h2 className="text-2xl md:text-3xl xl:text-4xl text-main-100 font-bold">
         {props.jobTitle}
-      </h3>
+      </h2>
       <Divisor />
       <div className="flex flex-col xl:flex-row justify-center items-center">
         <p className="text-dark text-xl md:text-2xl xl:text-2xl">

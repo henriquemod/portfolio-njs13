@@ -44,9 +44,9 @@ const Card = (props: IProps): JSX.Element => {
           </div>
         </div>
         <div className="flex flex-col my-2 text-gray-100">
-          <h1 className="text-main-100 text-xl font-bold mb-1 sm:text-2xl">
+          <h3 className="text-main-100 text-xl font-bold mb-1 sm:text-2xl">
             {props.title}
-          </h1>
+          </h3>
           <p className="indent-6 line-clamp-5 sm:text-xl">{props.message}</p>
         </div>
       </div>

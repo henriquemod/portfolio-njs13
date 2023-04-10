@@ -37,14 +37,14 @@ const ProfileBanner = (props: ProfileBannerProps): JSX.Element => {
           font-bold
           text-3xl"
         >
-          <h2
+          <h1
             className="
           sm:flex sm:justify-center sm:text-5xl
           md:justify-start"
           >
             {props.name}
-          </h2>
-          <h3
+          </h1>
+          <h2
             className="
             text-main-100
             mobile:text-2xl
@@ -52,7 +52,7 @@ const ProfileBanner = (props: ProfileBannerProps): JSX.Element => {
             md:text-start"
           >
             {props.job}
-          </h3>
+          </h2>
         </div>
         <div className="flex justify-center relative mb-4 sm:mb-8 md:mb-0 md:ml-8">
           <div

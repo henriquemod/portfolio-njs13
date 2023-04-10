@@ -30,7 +30,7 @@ const Chapter = (props: IProps): JSX.Element => {
         )}
       </div>
       <div className="self-end">
-        <h2 className="text-2xl mobile:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-75">{`</${props.title}>`}</h2>
+        <h6 className="text-2xl mobile:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-75">{`</${props.title}>`}</h6>
       </div>
     </div>
   );
