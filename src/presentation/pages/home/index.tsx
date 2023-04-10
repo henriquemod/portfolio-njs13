@@ -121,8 +121,8 @@ const Home = (props: IProps): JSX.Element => {
 
   return (
     <>
-      <div className="container mx-auto static">
-        <div className="hidden sm:flex flex-row">
+      <div className="container m-0 p-0 w-full">
+        <div className="sm:flex flex-row">
           <Header menuItens={options} />
         </div>
       </div>
