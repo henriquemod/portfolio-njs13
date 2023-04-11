@@ -1,4 +1,7 @@
 "use client";
+import FbAnalyticsClient, {
+  type IFirebaseAnalyticsConfig,
+} from "@/app/config/fb";
 import { type ProfileDataModel } from "@/domain/models/profile-data-model";
 import Board from "@/presentation/components/board";
 import Card from "@/presentation/components/card";
@@ -9,6 +12,7 @@ import JobSignature from "@/presentation/components/job-signature";
 import Lateral from "@/presentation/components/lateral";
 import ProfileBanner from "@/presentation/components/profile-banner";
 import Row from "@/presentation/components/row";
+import { useEffect } from "react";
 
 const options: IMenuItem[] = [
   {
@@ -35,10 +39,16 @@ const options: IMenuItem[] = [
 
 interface IProps {
   profileData: ProfileDataModel;
+  fbAnalyticsCfg: IFirebaseAnalyticsConfig;
 }
 
 const Home = (props: IProps): JSX.Element => {
-  const { profileData } = props;
+  const { profileData, fbAnalyticsCfg } = props;
+
+  useEffect(() => {
+    const newFb = new FbAnalyticsClient(fbAnalyticsCfg);
+    newFb.log("PageView");
+  }, []);
 
   const ProfileBannerComponent = () => (
     <ProfileBanner

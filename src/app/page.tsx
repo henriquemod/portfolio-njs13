@@ -1,6 +1,15 @@
 import { type ProfileDataModel } from "@/domain/models/profile-data-model";
 import HomeClient from "@/presentation/pages/home";
 import { type Metadata } from "next";
+import { type IFirebaseAnalyticsConfig } from "./config/fb";
+
+async function getAnalyticsConfig(): Promise<IFirebaseAnalyticsConfig> {
+  return {
+    apiKey: process.env.FIREBASE_API_KEY ?? "",
+    projectId: process.env.FIREBASE_PROJECT_ID ?? "",
+    appId: process.env.FIREBASE_APP_ID ?? "",
+  };
+}
 
 async function getData(): Promise<ProfileDataModel> {
   const fbUrl = process.env.FIREBASE_DB_URL;
@@ -69,6 +78,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Home() {
   const res = await getData();
+  const fbAnalyticsCfg = await getAnalyticsConfig();
 
-  return <HomeClient profileData={res} />;
+  return <HomeClient profileData={res} fbAnalyticsCfg={fbAnalyticsCfg} />;
 }
