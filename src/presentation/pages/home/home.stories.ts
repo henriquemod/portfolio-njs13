@@ -148,6 +148,11 @@ const meta = {
   tags: ["autodocs"],
   args: {
     profileData: fakeProfileData,
+    fbAnalyticsCfg: {
+      apiKey: "valid_api_key",
+      projectId: "valid_project_id",
+      appId: "valid_app_id",
+    },
   },
   argTypes: {},
 } satisfies Meta<typeof Home>;
