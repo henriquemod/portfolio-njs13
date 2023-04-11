@@ -48,7 +48,7 @@ const Home = (props: IProps): JSX.Element => {
   useEffect(() => {
     const newFb = new FbAnalyticsClient(fbAnalyticsCfg);
     newFb.log("PageView");
-  }, []);
+  }, [fbAnalyticsCfg]);
 
   const ProfileBannerComponent = () => (
     <ProfileBanner
