@@ -1,28 +1,6 @@
 import { type ProfileDataModel } from "@/domain/models/profile-data-model";
 import HomeClient from "@/presentation/pages/home";
 import { type Metadata } from "next";
-import { type IFirebaseAnalyticsConfig } from "./config/fb";
-
-async function getAnalyticsConfig(): Promise<IFirebaseAnalyticsConfig> {
-  const config = {
-    apiKey: process.env.FIREBASE_API_KEY ?? "",
-    projectId: process.env.FIREBASE_PROJECT_ID ?? "",
-    appId: process.env.FIREBASE_APP_ID ?? "",
-    measurementId: process.env.FIREBASE_MEASUREMENT_ID ?? "",
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN ?? "",
-    databaseURL: process.env.FIREBASE_DB_URL ?? "",
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET ?? "",
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID ?? "",
-  };
-
-  const hasAnyEmpty = Object.values(config).some((v) => v.length === 0);
-
-  if (hasAnyEmpty) {
-    throw new Error("Firebase config is not complete");
-  }
-
-  return config;
-}
 
 async function getData(): Promise<ProfileDataModel> {
   const fbUrl = process.env.FIREBASE_DB_URL;
@@ -91,7 +69,23 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Home() {
   const res = await getData();
-  const fbAnalyticsCfg = await getAnalyticsConfig();
+  const fbAnalyticsCfg = {
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY ?? "",
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID ?? "",
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID ?? "",
+    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID ?? "",
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN ?? "",
+    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DB_URL ?? "",
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET ?? "",
+    messagingSenderId:
+      process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID ?? "",
+  };
+
+  const hasAnyEmpty = Object.values(fbAnalyticsCfg).some((v) => v.length === 0);
+
+  if (hasAnyEmpty) {
+    throw new Error("Firebase config is not complete");
+  }
 
   return <HomeClient profileData={res} fbAnalyticsCfg={fbAnalyticsCfg} />;
 }
